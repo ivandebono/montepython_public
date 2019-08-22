@@ -272,14 +272,14 @@ def chain(cosmo, data, command_line):
                 # with # (i.e. the jumping factor adaptation was started) or not.
                 jump_value = jump_file.read().replace('# ','')
                 data.jumping_factor = float(jump_value)
-	    jump_file.close()
-	    print 'rank = ',rank
+	        jump_file.close()
+	        print 'rank = ',rank
         except:
-	    jump_file = open(command_line.folder + '/jumping_factor.txt','w')
-	    jump_file.write(str(data.jumping_factor))
-	    jump_file.close()
-	    rank = 0
-	    print 'rank = ',rank
+	        jump_file = open(command_line.folder + '/jumping_factor.txt','w')
+	        jump_file.write(str(data.jumping_factor))
+	        jump_file.close()
+	        rank = 0
+	        print 'rank = ',rank
             starting_jumping_factor = data.jumping_factor
 
     # Recover the covariance matrix according to the input, if the varying set

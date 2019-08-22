@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/bash
 
 ### Job name
 #BSUB -J Poly1
@@ -43,17 +43,17 @@ module load gcc
 module load openmpi
 module load python
 
-export WORKDIR=/home/dh573265/montepython_polychord
+export WORKDIR=~/montepython_polychord
 
-export LD_LIBRARY_PATH=/home/dh573265/software/PolyChord/PolyChord/lib:$LD_LIBRARY_PATH
-export LD_PRELOAD=/opt/MPI/openmpi-1.10.4/linux/gcc_4.8.5/lib/libmpi.so:$LD_PRELOAD
-export LD_LIBRARY_PATH=/home/dh573265/software/MultiNest/lib:$LD_LIBRARY_PATH
+#export LD_LIBRARY_PATH=~/PolyChord/PolyChord/lib:$LD_LIBRARY_PATH
+#export LD_PRELOAD=/opt/MPI/openmpi-1.10.4/linux/gcc_4.8.5/lib/libmpi.so:$LD_PRELOAD
+#export LD_LIBRARY_PATH=~/MultiNest/lib:$LD_LIBRARY_PATH
 
 #export PYTHONPATH=/home/dh573265/software/PolyChord/PolyChord
 
 ## source /home/dh573265/planck/plc-2.0/bin/clik_profile.zsh
 
-source /lustren/hpcwork/dh573265/plc-2.0/bin/clik_profile.zsh
+#source /lustren/hpcwork/dh573265/plc-2.0/bin/clik_profile.zsh
 
 ### Change to the work directory
 cd $WORKDIR
